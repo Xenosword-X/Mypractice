@@ -1,0 +1,62 @@
+/*content設定*/
+.content{
+	background-color: #efe9e7;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding:30px 0px;
+	color:#3d1101;
+}
+.content p{
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+.content form{
+	display: flex;
+	flex-direction: column;
+	border-top: 5px solid #ff5e45;
+	box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+	padding:15px;
+}
+form h2{
+	text-align: center;
+	font-weight: bold;
+}
+form label{
+	margin-top: 20px;
+}
+form input[type="email"], form input[type="password"] {
+    max-width: 270px;
+    height: 32px;
+    padding: 5px;
+	margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+form a{
+	margin-top: 5px;
+	color:#ff5e45;	
+}
+form .btn{
+	margin-top:20px;
+	display: flex;
+	justify-content: space-between;
+}
+form .register-btn, form .login-btn{
+	width:125px;
+	height: 32px;
+	border-radius: 4px;
+	color:white;
+	border: none;
+	cursor: pointer;
+}
+form .register-btn:hover, form .login-btn:hover{
+	background-color: black;
+}
+form .register-btn{
+	background-color: #9b9796;
+}
+form .login-btn{
+	background-color: #ff5e45;
+	margin-left: 10px;
+}
