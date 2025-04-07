@@ -1,0 +1,304 @@
+/*CSS reset*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*layout設計*/
+*,*:after,*:before{
+	box-sizing: border-box;
+}
+
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.wrap{
+    width:1024px;
+    margin: 0 auto;
+}
+
+.header{
+    background-image: url("../pic/index-banner.png");    
+    height: 560px;
+    background-size: cover;
+    background-position: center;
+}
+
+.nav{
+    padding: 15px 35px 0px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(74, 74, 74,0.5);
+    position: fixed;   /* 固定在視窗上 */
+    top: 0;            /* 距離頂部 0px */
+    left: center;           /* 靠左對齊 */
+    width: 1024px;       /* 讓導航列寬度填滿整個視窗 */
+    z-index: 1000;
+}
+
+.nav h1 a{
+	width: 170px;
+	height: 36px;
+	background-image: url("../pic/Logo.png");	
+	display: block;
+	text-indent: 101%;
+	overflow: hidden;
+	white-space: nowrap;
+    margin-bottom: 15px;
+}
+
+.menu{
+    display:flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+.menu li a{
+    padding: 20px;
+    display:block;
+    text-decoration: none;
+    color:white;
+    border-bottom: 3px solid transparent; /* 預留 border 空間 */
+}
+
+.menu li a:hover{
+    color:#00cc99;
+    border-bottom: 3px solid #00cc99;
+}
+
+.banner{
+    padding: 175px 35px 135px 35px;
+    font-size:46px;
+}
+
+.banner h2{
+    color:#00cc99;
+    line-height: 1.5;
+    margin-bottom: 60px;
+}
+
+.banner span{
+    color:white;
+}
+
+.banner a{
+    color:white;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 16px 40px;
+    border-radius:5px;
+    background-color: #00cc99; 
+}
+
+.banner a:hover{
+    color:black;
+    background-color: #00cc99;
+    opacity: 0.3;
+}
+
+/*footer樣式*/
+.footer{
+    padding: 35px;
+    background-color: #323228;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footerlogo{
+    display:flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    gap:10px;
+}
+
+.link{
+    display: flex;
+    justify-content: center;
+    gap:20px;
+}
+
+.link a{
+    display:block;
+    border-radius: 50%;
+}
+
+.link a:hover{
+    background-color: #00cc99;    
+}
+
+/*content樣式*/
+.content{
+    padding:60px 35px;
+}
+
+.course h2, .course-table h2{
+    font-size: 46px;
+    color:#00cc99;
+}
+
+.course span, .course-table span{
+    font-size: 24px;
+    color:#9b9b9b;
+}
+
+.course .title{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.course .title a{
+    text-decoration: none;
+    color:#00cc99;
+    padding:5px 10px;
+    display: block;
+    border: 2px solid #00cc99;
+    border-radius: 3px;
+}
+
+.course .title a:hover{
+    background-color: #00cc99;
+    color:white;
+}
+
+.course .item{
+    display:flex;
+    justify-content: center;
+    gap:20px;    
+}
+
+.course .item li{
+    width: 300px;
+    text-align: center;
+    padding:15px;
+    box-shadow: 0 0 10px;
+}
+
+.course .item h3{
+    margin: 20px 0;
+    font-size: 24px;
+}
+
+.course .item p{
+    color:#9b9b9b;
+}
+
+.course-table h2{
+    margin-top:50px;
+    margin-bottom:30px;
+}
+
+.tab{
+    width:100%;
+}
+  
+.tab th, .tab td{
+    padding:10px;
+    text-align:center;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+}
+  
+.tab th{
+    background-color:#f7f7f7;
+    font-weight:bold;
+}
+  
+.change{
+    color:#00a67d;
+}
+
+/*form樣式*/
+.hex-form, .faq-form{
+    background-color: #ebebeb;
+    padding:140px 35px;
+    display:flex;
+    justify-content: space-between;
+}
+
+.hex-form, .course-form h2, .faq-form h2{
+    font-size: 32px;
+    line-height: 2;
+    font-weight: bold;
+}
+
+form{
+    display:flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+form input, form textarea{
+    width:460px;
+    height: 50px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+form .submit{
+    width:140px;
+    padding:18px;
+    background-color: #00cc99;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+form .submit:hover{
+    background-color: #009977;
+}
+
+

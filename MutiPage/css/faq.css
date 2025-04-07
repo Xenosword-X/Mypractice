@@ -1,0 +1,92 @@
+.header{
+    background-image: url("../pic/faq-banner.png");    
+}
+
+.banner{
+    padding: 180px 200px;
+}
+
+.banner h2{
+    color:white;
+    font-size: 46px;
+    line-height: 1;
+    text-align: center;
+}
+
+.banner span{
+    color:#00cc99;
+    font-size: 24px;
+}
+
+.banner form{
+    position: relative;
+}
+
+.banner form input{
+    width:620px;
+    height: 55px;
+}
+
+.banner form button{
+    position: absolute;
+    right: 0px;
+    top:10px;
+}
+/*faq的content樣式*/
+.content{
+    padding: 60px 120px;
+}
+
+.content h2{
+    font-size: 32px;
+    color:#00cc99;
+    margin-bottom: 35px;
+}
+
+.content h2 span{
+    font-size:20px;
+    color:#9b9b9b;
+}
+
+.content h3{
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.content p{
+    font-size:18px;
+    color:#9b9b9b;
+    line-height: 1.5;
+    margin-bottom: 35px;
+}
+
+.content p a{
+    text-decoration: none;
+    color:#00cc99;
+}
+
+.content p a:hover{
+    text-decoration: underline;
+}
+
+.content ol, .content ul{
+    color:#9b9b9b;
+    line-height: 1.5;
+    padding-left: 50px;
+}
+
+.content ol{
+    list-style-type: decimal;
+}
+
+.content ul{
+    list-style-type: disc;
+}
+/*faq表單樣式，大部分沿用index樣式*/
+.faq-form{
+    padding:120px 40px;
+}
+
+.faq-form textarea{    
+    height:200px;    
+}

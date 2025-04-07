@@ -1,0 +1,116 @@
+/*course頁面的banner設計*/
+.header{
+    background-image: url("../pic/course-banner.png");   
+}
+
+.banner{
+    padding:110px 35px 0 35px; 
+}
+
+.banner .top{
+    display:flex;
+    justify-content: space-between;
+    
+}
+.banner .top img{
+    margin-left:20px;
+}
+
+.banner h2{
+    color:white;
+    line-height:1;
+    margin-top: 50px;
+}
+
+.banner span{
+    font-size: 24px;
+    color:#00cc99;
+}
+/*course頁面的content設計*/
+.content{
+    padding: 60px 200px;
+}
+
+.content .introduce{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;    
+}
+
+.content .introduce h2, .introduce-list h2, .course-table h2{
+    font-size: 32px;
+    color:#00cc99;
+    line-height: 40px;
+}
+
+.content .introduce span{
+    color:black;
+}
+
+.content .introduce ul{
+    color:#9b9b9b;
+    list-style: disc;
+    line-height: 24px;
+}
+
+.introduce-list{
+    margin:50px 0px;
+}
+
+.content .introduce-list span, .course-table span{
+    color:#9b9b9b;
+    font-size: 20px;
+}
+
+.introduce-list ol{
+    line-height: 24px;
+    list-style: decimal inside;
+}
+
+.course-table table{
+    width:100%;
+}
+
+.course-table table tr td{
+    padding:18px 40px;
+}
+
+/*.bgchange{
+    background-color: #ebebeb;
+}
+
+.fchange{
+    color:#9b9b9b;
+}*/
+
+.course-table tr:nth-child(odd){
+    background-color: #ebebeb;
+  }
+  
+.course-table tr:nth-child(even){
+    color:#9b9b9b;
+}
+/*course頁面的form設計*/
+.course-form{
+    padding:140px 200px;
+    display:flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    background-color: #ebebeb;
+}
+
+.course-form h2{
+    font-size: 32px;
+}
+
+.course-form a{
+    padding:18px 40px;
+    color: white;
+    background-color: #00cc99;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.course-form a:hover{
+    background-color: #009977;
+}
