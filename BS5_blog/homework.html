@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Fantasy 系列</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <style>
+        :root{
+            --bs-font-sans-serif: system-ui, -apple-system, "Microsoft JhengHei", "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", ;
+        }
+        .bg-cover{
+            background-position: center center;
+            background-size: cover;            
+        }
+        .banner-text{
+            background-color: aliceblue;
+            opacity: 0.5;
+        }
+        .nav-link{
+            border-bottom: 2px solid transparent;
+        }
+        .nav-link:hover{
+            border-bottom: 2px solid red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!--網站標題-->
+        <header class="py-3 text-center border-bottom">
+            <a href="#" class="h2 link-dark text-decoration-none"><span class="text-danger">Final Fantasy</span> 系列</a>
+        </header>
+
+        <!--網站導覽-->
+        <div class="overflow-auto py-1">
+            <nav class="nav justify-content-between flex-nowrap text-nowrap">
+                <a class="nav-link link-secondary" href="#">FF1</a>
+                <a class="nav-link link-secondary" href="#">FF2</a>
+                <a class="nav-link link-secondary" href="#">FF3</a>
+                <a class="nav-link link-secondary" href="#">FF4</a>
+                <a class="nav-link link-secondary" href="#">FF5</a>
+                <a class="nav-link link-secondary" href="#">FF6</a>
+                <a class="nav-link link-secondary" href="#">FF7</a>
+                <a class="nav-link link-secondary" href="#">FF8</a>
+                <a class="nav-link link-secondary" href="#">FF9</a>
+                <a class="nav-link link-secondary" href="#">FF10</a>
+                <a class="nav-link link-secondary" href="#">FF11</a>
+                <a class="nav-link link-secondary" href="#">FF12</a>
+                <a class="nav-link link-secondary" href="#">FF13</a>
+                <a class="nav-link link-secondary" href="#">FF14</a>
+                <a class="nav-link link-secondary" href="#">FF15</a>
+                <a class="nav-link link-secondary" href="#">FF16</a>
+            </nav>
+        </div>
+
+        <!--網站banner-->
+        <div class="p-4 p-md-5 mb-4 text-dark rounded-3 bg-cover" style="background-image: url('https://i.redd.it/h0nplahpovj91.jpg');">
+            <div class="col-md-6 banner-text">
+                <h1 class="display-4 fst-italic">最終幻想，一個從1987年開始的幻想RPG</h1>
+                <p class="lead my-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit doloremque quisquam debitis voluptas labore quod animi, velit voluptates tempore facere, dolor blanditiis itaque quidem. Aspernatur incidunt similique quo possimus id.</p>
+                <p class="lead mb-0"><a class="text-white" href="#">繼續閱讀</a></p>
+            </div>            
+        </div>
+
+        <!--網站卡片-->
+        <div id="carouselSlide" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="row row-cols-1 row-cols-lg-2 mb-3">
+                    <div class="col">
+                        <div class="card row g-0 flex-row h-100">
+                            <div class="col p-4 d-flex flex-column h-100">
+                                <strong class="d-inline-block mb-2 text-primary">FF1</strong>
+                                <div class="mb-1 text-muted">1987年</div>
+                                <p class="card-text mb-auto">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error dolorem modi quis, labore vitae quasi. Enim, aspernatur. Culpa, magnam non!</p>
+                                <a href="#" class="streched-link">繼續閱讀</a>
+                            </div>
+                            <div class="col-4 d-none d-lg-block bg-cover" style="background-image: url('https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1173770/capsule_616x353.jpg?t=1741165300');"></div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card row g-0 flex-row h-100">
+                            <div class="col p-4 d-flex flex-column h-100">
+                                <strong class="d-inline-block mb-2 text-primary">FF2</strong>
+                                <div class="mb-1 text-muted">1988年</div>
+                                <p class="card-text mb-auto">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto dolores beatae quia ipsum. Similique nisi aspernatur eum, deleniti vero beatae velit odio possimus at corporis consectetur sunt consequatur dolore quo?</p>
+                                <a href="#" class="streched-link">繼續閱讀</a>
+                            </div>
+                            <div class="col-4 d-none d-lg-block bg-cover" style="background-image: url('https://upload.wikimedia.org/wikipedia/en/f/f0/Ff2cover.jpg');"></div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="row row-cols-1 row-cols-lg-2 mb-3">
+                    <div class="col">
+                        <div class="card row g-0 flex-row h-100">
+                            <div class="col p-4 d-flex flex-column h-100">
+                                <strong class="d-inline-block mb-2 text-primary">FF3</strong>
+                                <div class="mb-1 text-muted">1987年</div>
+                                <p class="card-text mb-auto">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error dolorem modi quis, labore vitae quasi. Enim, aspernatur. Culpa, magnam non!</p>
+                                <a href="#" class="streched-link">繼續閱讀</a>
+                            </div>
+                            <div class="col-4 d-none d-lg-block bg-cover" style="background-image: url('https://pic.hdlulu.com/wordpress/wp-content/gallery/ff_series_logo/ff3_logo_3D_PR_1152x648.png');"></div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card row g-0 flex-row h-100">
+                            <div class="col p-4 d-flex flex-column h-100">
+                                <strong class="d-inline-block mb-2 text-primary">FF4</strong>
+                                <div class="mb-1 text-muted">1988年</div>
+                                <p class="card-text mb-auto">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto dolores beatae quia ipsum. Similique nisi aspernatur eum, deleniti vero beatae velit odio possimus at corporis consectetur sunt consequatur dolore quo?</p>
+                                <a href="#" class="streched-link">繼續閱讀</a>
+                            </div>
+                            <div class="col-4 d-none d-lg-block bg-cover" style="background-image: url('https://m.media-amazon.com/images/I/71r3f6GU2lL.jpg');"></div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="row row-cols-1 row-cols-lg-2 mb-3">
+                    <div class="col">
+                        <div class="card row g-0 flex-row h-100">
+                            <div class="col p-4 d-flex flex-column h-100">
+                                <strong class="d-inline-block mb-2 text-primary">FF5</strong>
+                                <div class="mb-1 text-muted">1987年</div>
+                                <p class="card-text mb-auto">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error dolorem modi quis, labore vitae quasi. Enim, aspernatur. Culpa, magnam non!</p>
+                                <a href="#" class="streched-link">繼續閱讀</a>
+                            </div>
+                            <div class="col-4 d-none d-lg-block bg-cover" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQW1XZUoYvXgHFwziGUwO0XHuELtkGFIUMHA&s');"></div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card row g-0 flex-row h-100">
+                            <div class="col p-4 d-flex flex-column h-100">
+                                <strong class="d-inline-block mb-2 text-primary">FF6</strong>
+                                <div class="mb-1 text-muted">1988年</div>
+                                <p class="card-text mb-auto">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto dolores beatae quia ipsum. Similique nisi aspernatur eum, deleniti vero beatae velit odio possimus at corporis consectetur sunt consequatur dolore quo?</p>
+                                <a href="#" class="streched-link">繼續閱讀</a>
+                            </div>
+                            <div class="col-4 d-none d-lg-block bg-cover" style="background-image: url('https://upload.wikimedia.org/wikipedia/en/0/05/Final_Fantasy_VI.jpg');"></div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselSlide" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselSlide" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        
+
+        <!--網站內容-->
+        <div class="row g-md-5">
+            <div class="col-md-8">
+                <artical>
+                    <h2>系列介紹</h2>
+                    <h3>FF1</h3>
+                    <p>《Final Fantasy》（日語：ファイナルファンタジー，英語：Final Fantasy，台港曾譯為「太空戰士」）是由坂口博信創作，史克威爾（現史克威爾艾尼克斯）開發，並於1987年在日本首發的奇幻電子角色扮演遊戲。遊戲是Final Fantasy系列的首作，故另有《Final Fantasy I》、《Final Fantasy 1》（簡稱FF1）的別稱。初版遊戲於FC遊戲機平台上市，之後又重製於數個主機平台，並經常和《Final Fantasy II》打包作為電子遊戲合集發行。遊戲故事講述了四個稱為光之戰士的年輕人的故事，他們分別持有世界上四個被四元素惡魔黑暗化的元素水晶。他們一起旅行擊敗這些邪惡勢力，讓水晶重新放出光芒，並拯救世界。
+
+                        因當時史克威爾面臨破產，公司內原以為本作會是史克威爾的最後一款遊戲。然而遊戲獲得了超乎預期的商業成功，並受到普遍好評，催生了許多成功的續作，形成現今的Final Fantasy系列。FC版本被認為是FC平台最成功、最有影響力的角色扮演遊戲之一，在此類遊戲的普及中扮演了重要作用。遊戲的畫面受到了好評，而批評聲主要集中於玩家需要花費大量時間隨機遇敵戰鬥來提升角色等級。截至2007年11月，《Final Fantasy》全平台的全球累計出貨量達213萬份。
+                    </p>
+                    <h3>FF2</h3>
+                    <p>《Final Fantasy II》（日語：ファイナルファンタジーII，英語：Fianl Fantasy II，台舊譯「太空戰士II」）是由史克威爾開發，並於1988年在任天堂FC遊戲機平臺發行的奇幻電子角色扮演遊戲，遊戲是Final Fantasy系列的第二部作品。遊戲於後來多次移植或重製，轉戰平臺包括WonderSwan Color、索尼PlayStation、Game Boy Advance、PlayStation Portable以及多個行動電話與智慧型手機。由於《Final Fantasy II》和《Final Fantasy III》初版都僅有日文版本未在歐美發行，為避免北美玩家困惑，《Final Fantasy IV》在北美發售時順應當地編號以「Final Fantasy II」為題。遊戲最新的重製版是iOS和Android版，其分別於2010年和2012年在全球發行。
+
+                        遊戲故事圍繞著四個父母被帕拉美琪亞帝國軍隊殺害的年輕人。四人中的三人加入了帝國反抗軍，完成任務來獲得新魔法和武器、毀壞敵人的超級武器並營救領導者。在擊敗了帝國和皇帝後，三人組找到了成為黑騎士的第四個年輕人，他取代了之前的皇帝並準備攻擊反抗軍。在與他對峙時，重生成為惡魔的皇帝出現，並準備毀滅世界。轉折下四名年輕人決定合力反擊，並最終在魔法城堡中消滅了惡魔。Game Boy Color版增加了遊戲結局後的劇情，講述了幾個配角的故事。
+                        
+                        許多《Final Fantasy II》引入的元素後來成為系列的共通元素，如陸行鳥和常設角色席德。遊戲沒有使用系列前作和續作中傳統的經驗值升級系統，而是讓能力值因角色使用與習得內容而增長的熟練度系統。雖然遊戲是《Final Fantasy》的續作，但並沒有出現前作中的角色與地域。《Final Fantasy II》在首發當時只有日文版本，幾乎沒有日本外評論者的關注，但之後的重製版則獲得正面評價。
+                    </p>
+                    <h3>FF3</h3>
+                    <p>《Final Fantasy III》（日語：ファイナルファンタジーIII，英語：Final Fantasy III，台港譯「太空戰士III」）是由史克威爾開發，並於1990年在FC遊戲機平臺發行的電子角色扮演遊戲，遊戲是Final Fantasy系列的第三部作品。本作是第一部使用職業轉換系統的Final Fantasy遊戲，也是Final Fantasy系列中第一部在最初版本即取得百萬以上銷量的作品。
+
+                        故事主角是受光之水晶引導的四個孤兒青年。水晶將自己的力量給了他們，並指示他們恢復世界的平衡。雖然他們不知道水晶話語的含義，但仍然能意識到其重要性，四青年將他們的使命告訴了收養家庭，並動身探索，找回世界的平衡。
+                        
+                        遊戲於1990年4月27日在日本首發，FC版在日本出貨140萬份。2006年發行任天堂DS重製版，將畫面以3D建模完全重製，該版本也是《Final Fantasy III》首次推出日文以外版本，而這也是當時唯一尚未在歐美發行過的Final Fantasy遊戲[15]。任天堂DS版在國際上獲得積極評價，並在全球售出193萬份。
+                    </p>
+                    <h3>FF4</h3>
+                    <p>《Final Fantasy IV》（日語：ファイナルファンタジーIV，英語：Final Fantasy IV，台灣舊譯「太空戰士IV」）是由史克威爾（今史克威爾艾尼克斯）開發並發行的電子角色扮演遊戲，為Final Fantasy系列的第四部本傳作品。1991年首發日文的超級任天堂版，後於多個平臺移植或重製。由於《Final Fantasy II》和《Final Fantasy III》的初版並未發行日文以外版本，故本作最初在北美發行時取名為「Final Fantasy II」（Final Fantasy II）以順應當地編號，但後來移植或重製的歐美版本則改回了原標題。
+
+                        遊戲圍繞主角暗騎士塞西爾，講述他試圖阻止法師高貝茲侵吞世界的故事。在旅程中不斷有隊員加入，亦有人因死亡、受傷或其他不幸事件而離隊。《Final Fantasy IV》引入的部分新元素成為了Final Fantasy系列及往後角色扮演遊戲的模板。和系列前作不同，遊戲使用了「即時戰鬥」系統，此系統也應用於多部系列續作中，同時《IV》中每個角色有固定的職業設定。
+                    </p>
+                    <h3>FF5</h3>
+                    <p>《Final Fantasy V》（日語：ファイナルファンタジーV，英語：Final Fantasy V，台灣舊譯「太空戰士V」）是由史克威爾開發並發行的電子角色扮演遊戲，是Final Fantasy系列的第五部正傳作品。1992年日文版遊戲於超級任天堂平台首發，後有1998年PlayStation和2006年Game Boy Advance的移植版。玩家扮演主角旅行者巴茲，乘著陸行鳥波可探索著奇幻背景的世界。1994年製作的原創動畫錄影帶《Final Fantasy》與本作有共同世界觀，講述了本作結局後的故事。遊戲於2011年4月在日本PlayStation Network發行。使用了高解析度圖形重製的手機版於2013年3月上架iOS，Android版於2013年9月發行。
+
+                        《Final Fantasy V》因角色培養高度自由，職業系統大幅擴展而獲得稱讚。初始的SFC版遊戲只在日本發行，但該版銷量依然達到245萬份。直到多年後移植PlayStation平台時，才首次推出日文以外的版本。
+                    </p>
+                    <h3>FF6</h3>
+                    <p>
+                        《Final Fantasy VI》（日語：ファイナルファンタジーVI，英語：Final Fantasy VI，中國大陸和香港譯作「最終幻想VI」，台舊譯「太空戰士6」）是一款由史克威爾（現史克威爾艾尼克斯）開發，於1994年在超級任天堂平台發行的角色扮演遊戲，為Final Fantasy系列的第6部本傳遊戲。故事設定在一個奇幻的世界，科技水準相當於第二次工業革命，講述了一個反抗組織試圖推翻帝國獨裁統治的過程點滴。遊戲有14位玩家角色，是Final Fantasy本傳系列作中可供玩家操控角色最多的。
+
+本作1994年在北美首次發布時標題為「Final Fantasy III」，蓋因在當時Final Fantasy系列的本傳有數部僅有日文版本未在歐美發行，造成北美版為順應當地編號而改名，所以有美國的老玩家視本作為FF3，但後來的歐美版本已改隨日版使用標題「VI」。PlayStation移植版於1999年發行，Game Boy Advance移植版於2006年發行，兩個版本皆由東星軟體製作，並在原版基礎上做了少量改變。遊戲於2011年3月15日在日本Wii Virtual Console的線上服務上架，隨後在PAL區（2011年3月18日）和北美地區（2011年6月30日）發行。
+                    </p>
+                </artical>
+            </div>
+            <div class="col-md-4 d-none d-md-block sticky-top">
+                <div class="sticky-top" style="top:16px">
+                <div class="p-4 bg-light rounded">
+                    <h4>關於我</h4>
+                    <p class="mb-0">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil obcaecati, officiis iste aliquam architecto nemo unde deserunt similique totam eligendi, repellendus, incidunt expedita accusantium. Magni ducimus possimus quis nesciunt placeat!</p>
+                </div>
+                <div class="p-4">
+                    <h4>官方網站</h4>
+                    <ol class="list-unstyled">
+                        <li><a href="#">FF1</a></li>
+                        <li><a href="#">FF2</a></li>
+                        <li><a href="#">FF3</a></li>
+                        <li><a href="#">FF4</a></li>
+                        <li><a href="#">FF5</a></li>
+                        <li><a href="#">FF6</a></li>
+                        <li><a href="#">FF7</a></li>
+                        <li><a href="#">FF8</a></li>
+                        <li><a href="#">FF9</a></li>
+                        <li><a href="#">FF10</a></li>
+                        <li><a href="#">FF11</a></li>
+                        <li><a href="#">FF12</a></li>
+                        <li><a href="#">FF13</a></li>
+                        <li><a href="#">FF14</a></li>
+                        <li><a href="#">FF15</a></li>
+                        <li><a href="#">FF16</a></li>
+                    </ol>
+                </div>
+                <div class="p-4">
+                    <h4>追蹤我</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="#">github</a></li>
+                        <li><a href="#">twiiter</a></li>
+                        <li><a href="#">FB</a></li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--網站footer-->
+    <footer class="bg-light bodter-top py-4 mt-5 text-center">
+        <p>bootstrap 5 練習作業</p>
+        <p>
+            <a href="#">Back to Top</a>
+        </p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+    crossorigin="anonymous"></script>
+</body>
+</html>
