@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首頁</title>
+    <link rel="stylesheet" href="./stylesheets/all.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.12.1/font/bootstrap-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!--導覽列-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <div class="container">
+          <a class="navbar-brand text-info" href="#">
+            <i class="bi bi-record-fill"></i>小懶蟲
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item mx-3">
+                <a class="nav-link active text-info" aria-current="page" href="index.html">首頁</a>
+              </li>
+              <li class="nav-item mx-3">
+                <a class="nav-link" href="#">服務介紹</a>
+              </li>
+              <li class="nav-item mx-3">
+                <a class="nav-link" href="payment.html">方案購買</a>
+              </li>
+              <li class="nav-item mx-3">
+                <a class="nav-link" href="question.html">常見問題</a>
+              </li>
+              <li class="nav-item mx-3">
+                <a class="btn btn-info" href="#">方案費用</a>
+              </li>              
+            </ul>            
+          </div>
+        </div>
+    </nav>
+
+    <!--banner設計-->
+    <header class="header px-4 py-5 d-flex align-items-lg-center justify-content-lg-center" style="background-image: url(./images/bg-home.jpg);">
+        <div class="text-white text-center">
+            <p class="fs-5">新一代啦啦隊女神</p>
+            <h1 class="fw-bold">樂天女孩胡佳琳</h1>
+            <p>胡佳琳，綽號嘎琳，台灣女藝人，前亞洲選美小姐（台灣賽區）亞軍。<br />2021年參加「猿來是妳」海選，落選後受樂天桃猿球團邀請擔任Rakuten Girls練習生，於2022年6月10日成為Rakuten Girls正式成員。</p>
+        </div>
+    </header>
+
+    <!--圖片區域設計-->
+    <section class="container my-5">        
+        <div class="row flex-row-reverse">            
+            <div class="col-lg-6 d-flex align-items-center">
+                <div>
+                    <h2>測試測試測試測試測試</h2>
+                    <p class="lh-5 text-secondary">我們有專業的清潔大師、花草大師，<br />
+                    也有學霸、來自各界的專業人才，<br />
+                    幫您處理您沒時間做的小事、大事，<br />
+                    讓你安心把人生花在你覺得更有意義的事情上！<br />
+                    （只要您有錢即可</p>
+                </div>                
+            </div>
+            <div class="col-lg-6">
+                <img src="./images/info.jpg" class="w-100" alt="">
+            </div>
+        </div>
+    </section>
+
+    <!--卡片區域設計-->
+    <section class="py-5" style="background-image: url(./images/bg_paper.png);">
+        <div class="container">
+            <h2 class="text-center mb-4">你有這些煩惱嗎？</h2>
+            <div class="row row-cols-1 row-cols-lg-4 g-3 g-lg-4">
+                <div class="col">
+                    <div class="card border-0 shadow">
+                        <div class="card-body text-center py-4">
+                            <i class="bi bi-trash-fill fs-s-48 text-info"></i>
+                            <h3 class="h4">追不到垃圾車</h3>
+                            <p class="text-secondary card-text-lh-5">每天追垃圾很煩嗎？倒個垃圾<br />還要走出門好累對吧？</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card border-0 shadow">
+                        <div class="card-body text-center py-4">
+                            <i class="bi bi-tree-fill fs-s-48 text-info"></i>
+                            <h3 class="h4">不會照顧盆栽</h3>
+                            <p class="text-secondary card-text-lh-5">覺得很可愛所以買一堆，結果<br />根本不會照顧，快死光了？</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card border-0 shadow">
+                        <div class="card-body text-center py-4">
+                            <i class="bi bi-person-workspace fs-s-48 text-info"></i>
+                            <h3 class="h4">作業不會寫</h3>
+                            <p class="text-secondary card-text-lh-5">什麼微積分、程式設計、或是<br />設計稿，不會做也不想做？</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card border-0 shadow">
+                        <div class="card-body text-center py-4">
+                            <i class="bi bi-suit-heart-fill fs-s-48 text-info"></i>
+                            <h3 class="h4">很不開心</h3>
+                            <p class="text-secondary card-text-lh-5">每天都把時間花在不想做的事<br />情就飽了，怎麼快樂？</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--方案費用設計-->
+    <section class="py-5 container">
+        <h2 class="text-center mb-4">方案費用</h2>
+        <div class="row row-cols-1 row-cols-lg-3">            
+            <div class="col">
+                <div class="card border-0 shadow h-100">
+                    <div class="card-header border-0 text-center text-secondary">小小搭懶蟲</div>
+                    <div class="card-body text-center">
+                        <img src="./images/plan01.jpg" class="img-fliud" alt="plans01">
+                        <div class="text-info mt-3">
+                            NT <strong class="fs-1">298</strong> / 月
+                        </div>
+                    </div>
+                    <ul class="list-group list-group-flush border-top border-bottom">
+                        <li class="list-group-item text-secondary"><i class="bi bi-check-lg text-info"></i> 每週三天定時收垃圾</li>
+                        <li class="list-group-item text-secondary"><i class="bi bi-check-lg text-info"></i> 當你的小鬧鐘，提醒你要完成的重要事項</li>
+                        <li class="list-group-item text-secondary"><i class="bi bi-check-lg text-info"></i> 幫你查資料</li>                        
+                    </ul>
+                    <div class="card-body d-flex align-items-end">
+                        <button type="button" class="btn btn-info w-100">選擇方案</button>
+                    </div>
+                </div>    
+            </div>
+            <div class="col">
+                <div class="card border-0 shadow h-100">
+                    <div class="card-header border-0 text-center bg-info text-white">睡一整天囉</div>
+                    <div class="card-body text-center">
+                        <img src="./images/plan02.jpg" class="img-fliud" alt="plans02">
+                        <div class="text-info mt-3">
+                            NT <strong class="fs-1">666</strong> / 月
+                        </div>
+                    </div>
+                    <ul class="list-group list-group-flush border-top border-bottom">
+                        <li class="list-group-item text-secondary"><i class="bi bi-check-lg text-info"></i> 小懶蟲方案所有服務</li>
+                        <li class="list-group-item text-secondary"><i class="bi bi-check-lg text-info"></i> 每週一天幫你整理房間</li>
+                        <li class="list-group-item text-secondary"><i class="bi bi-check-lg text-info"></i> 幫你安排三餐（會先確認你的喜好）</li>
+                        <li class="list-group-item text-secondary"><i class="bi bi-check-lg text-info"></i> 每週一天幫你採買日用品（限台灣）</li>
+                    </ul>
+                    <div class="card-body">
+                        <button type="button" class="btn btn-info w-100">選擇方案</button>
+                    </div>
+                </div>    
+            </div>
+            <div class="col">
+                <div class="card border-0 shadow h-100">
+                    <div class="card-header border-0 text-center text-secondary">自由自在的人生</div>
+                    <div class="card-body text-center flex-grow-0">
+                        <img src="./images/plan03.jpg" class="img-fliud" alt="plans03">
+                        <div class="text-info my-4 fs-5">
+                            客製化詢價
+                        </div>
+                    </div>
+                    <ul class="list-group list-group-flush border-top border-bottom">
+                        <li class="list-group-item text-secondary ps-5">
+                            <i class="bi bi-check-lg text-info position-absolute start-0 ms-3"></i> 希望有個小秘書、小幫手，完成您交辦的客製化任務，歡迎與我們聯繫！
+                        </li>
+                    </ul>
+                    <div class="card-body d-flex align-items-end">
+                        <button type="button" class="btn btn-info w-100">線上諮詢</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--其他協助區域設計-->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="fw-bold text-center mb-5">需要其他協助嗎?</h2>
+            <div class="row row-cols-1 row-cols-lg-3 d-flex justify-content-lg-center">
+                <div class="col-lg-3 mb-4"> 
+                    <div class="card border-0 shadow">
+                        <div class="card-header fs-5 text-center py-3"><i class="bi bi-telephone-fill text-info"></i> 07-555-666</div>
+                    </div>                      
+                </div>
+                <div class="col-lg-3 mb-4">
+                    <div class="card border-0 shadow">
+                        <div class="card-header fs-5 text-center py-3"><i class="bi bi-facebook text-info"></i> 我就是個小懶蟲</div>
+                    </div>
+                </div>
+                <div class="col-lg-3 mb-4">
+                    <div class="card border-0 shadow">
+                        <div class="card-header fs-5 text-center py-3"><i class="bi bi-question-lg text-info"></i> 常見問題</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--footer設計-->
+    <footer class="p-4 bg-secondary">
+        <p class="text-center text-white mb-0">Copyright © 2021 小懶蟲.All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+</body>
+</html>
