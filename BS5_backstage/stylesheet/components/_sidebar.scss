@@ -8,6 +8,7 @@ $sidebar-width: 280px;
   transition: margin-left 0.25s;
   position: fixed;
   top: 0;
+  z-index: 2;
 
   // sidebar-link 樣式
   .sidebar-link {
@@ -41,6 +42,8 @@ $sidebar-width: 280px;
 
 .main {
   width: 100%;
+  position: relative;
+  z-index: 1;
 }
 
 // 行動版才有的 sidebar 展開效果
@@ -60,6 +63,16 @@ $sidebar-width: 280px;
 // 桌面版（992px 以上）
 // ----------------------------------
 @include media-breakpoint-up(lg) {
+  .sidebar-toggled {  // 隱藏 sidebar 
+    .sidebar {
+      margin-left: -280px;
+    }
+
+    .main {  // 滿寬 、填滿 sidebar 隱藏後的空間
+      margin-left: 0;
+      width: 100%;
+    }
+  }
   .sidebar {
     margin-left: 0;
     width: $sidebar-width;
