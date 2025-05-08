@@ -1,4 +1,28 @@
 @charset "UTF-8";
+header {
+  height: 627px;
+  background-size: cover;
+  background-position: top center;
+}
+
+.deco-line {
+  padding-left: 1rem;
+  position: relative;
+}
+.deco-line::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 3px;
+  background-color: #0dcaf0;
+}
+
+.btn-special.active {
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
 /*!
  * Bootstrap  v5.3.5 (https://getbootstrap.com/)
  * Copyright 2011-2025 The Bootstrap Authors
@@ -3910,12 +3934,12 @@ textarea.form-control-lg {
   --bs-navbar-color: rgba(var(--bs-emphasis-color-rgb), 0.65);
   --bs-navbar-hover-color: rgba(var(--bs-emphasis-color-rgb), 0.8);
   --bs-navbar-disabled-color: rgba(var(--bs-emphasis-color-rgb), 0.3);
-  --bs-navbar-active-color: rgba(var(--bs-emphasis-color-rgb), 1);
+  --bs-navbar-active-color: rgba(13, 202, 240, 0.9);
   --bs-navbar-brand-padding-y: 0.3125rem;
   --bs-navbar-brand-margin-end: 1rem;
   --bs-navbar-brand-font-size: 1.25rem;
-  --bs-navbar-brand-color: rgba(var(--bs-emphasis-color-rgb), 1);
-  --bs-navbar-brand-hover-color: rgba(var(--bs-emphasis-color-rgb), 1);
+  --bs-navbar-brand-color: rgba(13, 202, 240, 0.9);
+  --bs-navbar-brand-hover-color: rgba(13, 202, 240, 0.9);
   --bs-navbar-nav-link-padding-x: 0.5rem;
   --bs-navbar-toggler-padding-y: 0.25rem;
   --bs-navbar-toggler-padding-x: 0.75rem;
@@ -7308,10 +7332,6 @@ textarea.form-control-lg {
   box-shadow: var(--bs-box-shadow-sm) !important;
 }
 
-.shadow-lg {
-  box-shadow: var(--bs-box-shadow-lg) !important;
-}
-
 .shadow-none {
   box-shadow: none !important;
 }
@@ -8358,8 +8378,16 @@ textarea.form-control-lg {
   font-weight: bolder !important;
 }
 
+.lh-0 {
+  line-height: 0rem !important;
+}
+
 .lh-1 {
   line-height: 1 !important;
+}
+
+.lh-5 {
+  line-height: 5rem !important;
 }
 
 .lh-sm {
@@ -9116,6 +9144,10 @@ textarea.form-control-lg {
   z-index: 3 !important;
 }
 
+.fs-s-48 {
+  font-size: calc(1.425rem + 2.1vw) !important;
+}
+
 @media (min-width: 576px) {
   .float-sm-start {
     float: left !important;
@@ -9178,6 +9210,15 @@ textarea.form-control-lg {
   }
   .d-sm-none {
     display: none !important;
+  }
+  .shadow-sm {
+    box-shadow: var(--bs-box-shadow) !important;
+  }
+  .shadow-sm-sm {
+    box-shadow: var(--bs-box-shadow-sm) !important;
+  }
+  .shadow-sm-none {
+    box-shadow: none !important;
   }
   .flex-sm-fill {
     flex: 1 1 auto !important;
@@ -9740,6 +9781,15 @@ textarea.form-control-lg {
   .d-md-none {
     display: none !important;
   }
+  .shadow-md {
+    box-shadow: var(--bs-box-shadow) !important;
+  }
+  .shadow-md-sm {
+    box-shadow: var(--bs-box-shadow-sm) !important;
+  }
+  .shadow-md-none {
+    box-shadow: none !important;
+  }
   .flex-md-fill {
     flex: 1 1 auto !important;
   }
@@ -10300,6 +10350,15 @@ textarea.form-control-lg {
   }
   .d-lg-none {
     display: none !important;
+  }
+  .shadow-lg {
+    box-shadow: var(--bs-box-shadow) !important;
+  }
+  .shadow-lg-sm {
+    box-shadow: var(--bs-box-shadow-sm) !important;
+  }
+  .shadow-lg-none {
+    box-shadow: none !important;
   }
   .flex-lg-fill {
     flex: 1 1 auto !important;
@@ -10862,6 +10921,15 @@ textarea.form-control-lg {
   .d-xl-none {
     display: none !important;
   }
+  .shadow-xl {
+    box-shadow: var(--bs-box-shadow) !important;
+  }
+  .shadow-xl-sm {
+    box-shadow: var(--bs-box-shadow-sm) !important;
+  }
+  .shadow-xl-none {
+    box-shadow: none !important;
+  }
   .flex-xl-fill {
     flex: 1 1 auto !important;
   }
@@ -11423,6 +11491,15 @@ textarea.form-control-lg {
   .d-xxl-none {
     display: none !important;
   }
+  .shadow-xxl {
+    box-shadow: var(--bs-box-shadow) !important;
+  }
+  .shadow-xxl-sm {
+    box-shadow: var(--bs-box-shadow-sm) !important;
+  }
+  .shadow-xxl-none {
+    box-shadow: none !important;
+  }
   .flex-xxl-fill {
     flex: 1 1 auto !important;
   }
@@ -11934,6 +12011,9 @@ textarea.form-control-lg {
   .fs-4 {
     font-size: 1.5rem !important;
   }
+  .fs-s-48 {
+    font-size: 3rem !important;
+  }
 }
 @media print {
   .d-print-inline {
@@ -11969,27 +12049,4 @@ textarea.form-control-lg {
   .d-print-none {
     display: none !important;
   }
-}
-header {
-  height: 627px;
-  background-size: cover;
-  background-position: top center;
-}
-
-.deco-line {
-  padding-left: 1rem;
-  position: relative;
-}
-.deco-line::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  width: 3px;
-  background-color: #0dcaf0;
-}
-
-.btn-special.active {
-  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
 }/*# sourceMappingURL=all.css.map */

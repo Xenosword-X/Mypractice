@@ -516,7 +516,7 @@ $utilities: map-merge(
       property: font-size,
       class: fs-s,
       values: (
-        48: 48 px
+        48: 48px
       )
     ),
     "font-style": (
@@ -541,7 +541,9 @@ $utilities: map-merge(
       property: line-height,
       class: lh,
       values: (
+        0: 0rem,
         1: 1,
+        5: 5rem,
         sm: $line-height-sm,
         base: $line-height-base,
         lg: $line-height-lg,
