@@ -1,0 +1,32 @@
+//處理在低解析度螢幕下會有元件溢出x軸的狀況
+.container {
+    overflow-x: hidden;
+}
+
+//載入noto sans與kalam字體
+body{
+    font-family: 'Noto Sans', sans-serif;
+}
+.kalam{
+    font-family: 'Kalam', cursive;
+    font-weight: 700; /* Bold */
+}
+
+//首頁nav調整
+.navbar-nav .nav-link:hover {
+    color: var(--bs-primary) !important;
+}
+.navbar-nav .btn:hover{
+    box-shadow: 0px 3px 0px black;
+}
+
+//首頁右下角按鈕固定
+.change-btn{
+    position:fixed;
+    bottom: 0px;
+    right :0px;
+}
+
+
+
+

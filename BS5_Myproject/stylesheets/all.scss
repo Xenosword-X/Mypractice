@@ -3,15 +3,14 @@
 
 // 2. Include any default variable overrides here
 @import "./helpers/variables";
-@import "../node_modules/bootstrap/scss/variables-dark";
 
 // 3. Include remainder of required Bootstrap stylesheets (including any separate color mode stylesheets)
-
+@import "../node_modules/bootstrap/scss/bootstrap";
 
 // 4. Include any optional Bootstrap CSS as needed
-@import "../node_modules/bootstrap/scss/maps";
 @import "./helpers/utilities";
-@import "./components/header";
-@import "./components/deco-line";
-@import "./components/custom-btn";
-@import "../node_modules/bootstrap/scss/bootstrap";
+@import "./components/home";
+@import "./components/design";
+@import "./components/adoption";
+
+
