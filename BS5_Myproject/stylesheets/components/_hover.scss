@@ -1,0 +1,32 @@
+//首頁全新精品卡片hover樣式
+.hover-card:hover .card-title,
+.hover-card:hover .card-text {
+  display: block !important; /* 覆蓋 .d-none 的 display: none */
+}
+
+//首頁二手良品卡片hover樣式
+/* 背景圖設定 */
+.bg-img {
+  height: 424px; /* 或你想要的高度 */
+  background-image: url('./images/PSVR01.jpg');    
+  background-size: cover;
+  background-position: center;
+  transition: background-image 0.3s ease;
+  border-top-left-radius: 1rem;  /* 與 .rounded-5 對應 */
+  border-top-right-radius: 1rem;
+}
+
+/* hover 時切換背景圖 */
+.hover-card2:hover .bg-img {
+  background-image: url('./images/PSVR02.png');  
+}
+
+/* 按鈕文字顏色變化 */
+.btn-more {
+  color: #212529;
+  transition: color 0.3s ease;
+}
+
+.hover-card2:hover .btn-more {
+  color: #0d6efd;
+}
