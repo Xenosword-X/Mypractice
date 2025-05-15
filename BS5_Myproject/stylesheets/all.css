@@ -12033,7 +12033,6 @@ body {
 /* 背景圖設定 */
 .bg-img {
   height: 424px; /* 或你想要的高度 */
-  background-image: url("./images/PSVR01.png");
   background-size: cover;
   background-position: center;
   transition: background-image 0.3s ease;
@@ -12041,9 +12040,29 @@ body {
   border-top-right-radius: 1rem;
 }
 
+.img1 {
+  background-image: url("../images/PSVR01.jpg");
+}
+
+.img2 {
+  background-image: url("../images/PS3-01.png");
+}
+
+.img3 {
+  background-image: url("../images/PSC-01.jpg");
+}
+
 /* hover 時切換背景圖 */
-.hover-card2:hover .bg-img {
-  background-image: url("./images/PSVR02.png");
+.hover-product:hover .img1 {
+  background-image: url("../images/PSVR02.png");
+}
+
+.hover-product:hover .img2 {
+  background-image: url("../images/PS3-02.png");
+}
+
+.hover-product:hover .img3 {
+  background-image: url("../images/PSC-02.jpg");
 }
 
 /* 按鈕文字顏色變化 */
@@ -12052,6 +12071,6 @@ body {
   transition: color 0.3s ease;
 }
 
-.hover-card2:hover .btn-more {
+.hover-product:hover .btn-more {
   color: #0d6efd;
 }/*# sourceMappingURL=all.css.map */
