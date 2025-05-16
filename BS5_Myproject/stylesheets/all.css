@@ -12006,7 +12006,7 @@ body {
 }
 
 .design .nav-link:not(.active):hover {
-  color: #0d6efd !important; /* Bootstrap 的 text-warning 顏色 */
+  color: #0d6efd !important; /* Bootstrap 的 text-primary 顏色 */
   position: relative;
 }
 
@@ -12032,7 +12032,7 @@ body {
 
 /* 背景圖設定 */
 .bg-img {
-  height: 424px; /* 或你想要的高度 */
+  height: 424px;
   background-size: cover;
   background-position: center;
   transition: background-image 0.3s ease;
