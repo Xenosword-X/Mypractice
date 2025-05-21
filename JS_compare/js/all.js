@@ -5,7 +5,7 @@ let rawData=[];
 axios.get(apiUrl)
   .then(function(response) {
     rawData = response.data;
-    renderTable(rawData);
+    //renderTable(rawData);
   })
   .catch(function(error) {
     console.error('讀取失敗', error);
@@ -42,7 +42,7 @@ search.addEventListener('click',function(e){
         return item.作物名稱 && item.作物名稱.includes(crop.value.trim());
     })
     if (filterData.length === 0) { //如果搜尋到0筆就顯示查無資料
-        showList.innerHTML = `<tr><td colspan="7" class="text-center p-3">查無資料</td></tr>`;
+        showList.innerHTML = `<tr><td colspan="7" class="text-center p-3">查詢不到當日的交易資訊QQ</td></tr>`;
     } else {
         renderTable(filterData);
     }
