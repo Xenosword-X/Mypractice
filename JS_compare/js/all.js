@@ -1,7 +1,8 @@
 //串接遠端API https://hexschool.github.io/js-filter-data/data.json
 const apiUrl = 'https://hexschool.github.io/js-filter-data/data.json';
 const showList = document.querySelector('.showList');
-let rawData=[];
+let rawData=[]; //存入API全部資料
+let currentData=[]; //存入按鈕與搜尋列篩選後的資料
 axios.get(apiUrl)
   .then(function(response) {
     rawData = response.data;
@@ -44,6 +45,7 @@ search.addEventListener('click',function(e){
     if (filterData.length === 0) { //如果搜尋到0筆就顯示查無資料
         showList.innerHTML = `<tr><td colspan="7" class="text-center p-3">查詢不到當日的交易資訊QQ</td></tr>`;
     } else {
+        currentData=filterData; //篩選後存入全域變數中，以供排序來使用
         renderTable(filterData);
     }
 })
@@ -55,6 +57,7 @@ button_group.addEventListener("click",function(e){
     const filterData=rawData.filter(function(item){
         return item.種類代碼===type;
     }) 
+    currentData=filterData; //篩選後存入全域變數中，以供排序來使用
     renderTable(filterData);
 })
 
@@ -94,7 +97,7 @@ mobile_select.addEventListener("change",function(e){
 function sortedRenderData(type){
     const key = sortKeyMap[type]; // 取出點擊屬性記載到key變數裡，用物件的中括號屬性存取方式，不能用點記法
     // 過濾出有該欄位資料的項目，並轉為數字後排序
-    const sortedData = rawData.filter(function(item) { //先用slice()淺拷貝複製原陣列避免被sort()破壞
+    const sortedData = currentData.filter(function(item) { 
         return item[key] && item[key] !== "-"; //過濾掉空值與"-"的資料
     })
     sortedData.sort(function(a, b) {
@@ -111,7 +114,7 @@ sortedkey.forEach(function(iconkey){
         const sortOrder = e.target.getAttribute('data-sort');
         if (!key || !sortOrder) return;
         //過濾空值和 "-"
-        const filteredData = rawData.filter(function(item) {
+        const filteredData = currentData.filter(function(item) {
             return item[key] && item[key] !== "-";
         });
         //排序
