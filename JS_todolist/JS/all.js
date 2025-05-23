@@ -5,9 +5,7 @@ const unfinish=document.querySelector('.unfinish');
 const list=document.querySelector('.list');
 
 //初始資料
-let data=[
-    
-]
+let data=[];
 
 //資料渲染
 function renderData(filter = 'all'){
@@ -95,7 +93,7 @@ save.addEventListener('click',function(e){
 })
 //鍵盤enter監聽
 input_text.addEventListener('keydown',function(e){
-    if(e.key==="Enter"){ //e.key代表
+    if(e.key==="Enter"){ //e.key代表鍵盤裡的輸入指令
         handleSave();
     }
 })

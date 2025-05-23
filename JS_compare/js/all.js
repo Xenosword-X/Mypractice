@@ -62,7 +62,6 @@ button_group.addEventListener("click",function(e){
     const filterData=rawData.filter(function(item){
         return item.種類代碼===type;
     }) 
-
     currentData=filterData; //篩選後存入全域變數中，以供排序來使用
     renderTable(filterData);
 })
