@@ -61,7 +61,10 @@ body {
 }
 .btn-type:hover,
 .btn-type:active {
-  background: #f8d45a;
+  background-color: #f8d45a;
+}
+.btn-type.active{
+  background-color: #f8d45a;
 }
 @media (max-width: 767px) {
   .btn-type {

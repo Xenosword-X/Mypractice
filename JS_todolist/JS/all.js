@@ -1,64 +1,46 @@
-//完成與未完成資料
-let unfinish_data=[
-    
-]
-let finish_data=[
-
-]
-
-//資料渲染
-function renderData(type = 'unfinish'){
-    let str="";
-    let targetData = [];
-    if (type === 'unfinish') {
-        targetData = unfinish_data;
-    } else if (type === 'finish') {
-        targetData = finish_data;
-    } else if (type === 'all') {
-        targetData = [...unfinish_data, ...finish_data]; // 合併兩個陣列
-    }
-    targetData.forEach(function(item,index){
-        str+=`<li><label class="checkbox"><input type="checkbox" ${finish_data.includes(item) ? 'checked' : ''} /><span>${item.content}</span></label><a href="#" class="delete" data-num=${index} data-type="${type}"></a></li>`
-    })
-    const list=document.querySelector('.list');
-    list.innerHTML=str;
-    const total=document.querySelector('.list_footer p');
-    total.textContent = `${unfinish_data.length} 個待完成項目`;
-}
-renderData();
-
-//新增代辦
-const save = document.querySelector(".btn_add");
-const input_text = document.querySelector(".input_text");
-save.addEventListener('click',function(e){
-    if(input_text.value==""){
-        alert("請輸入內容");
-        return;
-    }
-    let obj={};
-    obj.content=input_text.value;
-    unfinish_data.push(obj);
-    renderData();
-    input_text.value="";
-})
-
-//刪除代辦(從待完成清單刪除，加到已完成清單)
-const list = document.querySelector(".list");
-list.addEventListener('click',function(e){
-    if(e.target.getAttribute('class')!=="delete"){
-        return;
-    }
-    let num=e.target.getAttribute('data-num'); // 宣告num變數儲存該筆資料的索引
-    const item=unfinish_data[num]; // 宣告item變數儲存該筆資料內容
-    finish_data.push(item);
-    unfinish_data.splice(num,1);
-    renderData();
-})
-
-//顯示切換
+//宣告全域變數
 const all=document.querySelector('.all');
 const finish=document.querySelector('.finish');
 const unfinish=document.querySelector('.unfinish');
+const list=document.querySelector('.list');
+
+//初始資料
+let data=[
+    
+]
+
+//資料渲染
+function renderData(filter = 'all'){
+    let filterData=data;
+    // 過濾資料
+    if (filter === "unfinish") {
+        filterData = filterData.filter(item => !item.checked);
+    }else if(filter === "finish"){
+        filterData = filterData.filter(item => item.checked);
+    }
+    // 渲染列表
+    let str="";
+    filterData.forEach(function(item,index){
+        // ${finish_data.includes(item) ? 'checked' : ''}代表若在已完成清單，就打勾
+        str+=`
+        <li>
+            <label class="checkbox">
+                <input type="checkbox" class="checkedMark" data-index="${index}" ${item.checked ? 'checked' : ''} />
+                <span>${item.content}</span>
+            </label>
+            <a href="#" class="delete" data-num="${index}"></a>
+        </li>
+        `
+    })
+    list.innerHTML=str;
+    CheckedEvent();
+    //更新待完成項目統計
+    const total=document.querySelector('.list_footer p');
+    const unfinishCount = data.filter(item => !item.checked).length;
+    total.textContent = `${unfinishCount} 個待完成項目`;
+}
+
+//顯示切換
 all.addEventListener('click',function(e){
     e.preventDefault();
     renderData('all');
@@ -81,18 +63,58 @@ unfinish.addEventListener('click', function(e) {
     unfinish.classList.add('active');
 });
 
-//清除已完成項目
-const all_delete=document.querySelector('.list_footer a');
-all_delete.addEventListener('click',function(e){
-    e.preventDefault();
-    finish_data=[];
-    // 根據當前選取的 tab 來渲染對應的內容
-    if (all.classList.contains('active')) {
-        renderData('all');
-    } else if (finish.classList.contains('active')) {
-        renderData('finish');
-    } else {
-        renderData('unfinish');
+//checkedEvent事件渲染
+function CheckedEvent(){
+    const checkedMark = document.querySelectorAll('.checkedMark');
+    checkedMark.forEach(function(mark){
+        mark.addEventListener('change',function(e){
+            const index = e.target.dataset.index; // 獲取資料索引
+            data[index].checked = e.target.checked; // 更新資料狀態
+            renderData(); // 重新渲染
+        })
+    })
+}
+
+//新增代辦
+const save = document.querySelector(".btn_add");
+const input_text = document.querySelector(".input_text");
+function handleSave(){
+    if(input_text.value.trim()==""){
+        alert("請輸入內容");
+        return;
+    }
+    let obj={};
+    obj.content=input_text.value;
+    data.push(obj);
+    renderData();
+    input_text.value="";
+}
+//點擊監聽
+save.addEventListener('click',function(e){
+    handleSave();
+})
+//鍵盤enter監聽
+input_text.addEventListener('keydown',function(e){
+    if(e.key==="Enter"){ //e.key代表
+        handleSave();
     }
 })
 
+//刪除項目
+list.addEventListener('click',function(e){
+    if(e.target.getAttribute('class')!=="delete"){
+        return;
+    }
+    let num=e.target.getAttribute('data-num'); // 宣告num變數儲存該筆資料的索引
+    data.splice(num,1);    
+    renderData();
+})
+
+//清除已完成項目
+const all_delete=document.querySelector('.list_footer a');
+all_delete.addEventListener('click',function(e){
+    data = data.filter(item => !item.checked);
+    renderData();
+})
+
+renderData();

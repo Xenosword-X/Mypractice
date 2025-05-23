@@ -9,7 +9,8 @@ axios.get(apiUrl)
     //renderTable(rawData);
   })
   .catch(function(error) {
-    console.error('讀取失敗', error);
+    alert("伺服器存取失敗，請稍後再試");
+    console.error('API false', error);
   });
 
 //資料渲染
@@ -53,13 +54,27 @@ search.addEventListener('click',function(e){
 //按鈕篩選 (比較種類代碼: N04 N05 N06)
 const button_group=document.querySelector('.button-group');
 button_group.addEventListener("click",function(e){
-    const type=e.target.getAttribute("data-type"); //紀錄點擊到的按鈕type屬性 N04 N05 N06
+    const type=e.target.getAttribute("data-type"); //紀錄點擊到的按鈕type屬性N01 N04 N05 N06
+    if(type==="N01"){
+        renderTable(rawData);
+        return;
+    }
     const filterData=rawData.filter(function(item){
         return item.種類代碼===type;
     }) 
+
     currentData=filterData; //篩選後存入全域變數中，以供排序來使用
     renderTable(filterData);
 })
+//按鈕active效果
+const buttons = document.querySelectorAll(".btn-type");
+buttons.forEach(function(btn) {
+    btn.addEventListener("click", function() {
+        buttons.forEach((b) => b.classList.remove("active")); // 移除所有按鈕的 active
+        btn.classList.add("active"); // 為目前點擊的按鈕加上 active
+    });
+});
+
 
 //排序篩選
 //對照欄位文字與資料欄位的對應
@@ -69,11 +84,6 @@ const sortKeyMap = {
     "依下價排序": "下價",
     "依平均價排序": "平均價",
     "依交易量排序": "交易量",
-    "上價": "上價",
-    "中價": "中價",
-    "下價": "下價",
-    "平均價": "平均價",
-    "交易量": "交易量"
 };
 //桌面版事件綁定
 const sort_select=document.querySelector('.sort-select');
