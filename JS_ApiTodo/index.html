@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>線上代辦系統 | Todo App</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/css/all.min.css">    
+    <link rel="stylesheet" href="./stylesheets/all.css">
+</head>
+<body>
+    <!--登入頁面-->
+    <section class="login_page bg-primary">
+        <div class="container p-5">
+            <h1 class="text-center text-md-start"><img src="./img/logo_lg.png" class="img-fluid" alt="logo"></h1>
+            <div class="row justify-content-center">
+                <div class="col-5 d-none d-md-block">
+                    <img src="./img/img2.png" class="img-fluid" alt="img">
+                </div>
+                <div class="col-12 col-md-5">
+                    <h3 class="text-secondary fw-bold mb-3 text-center text-md-start">最實用的線上代辦事項服務</h3>
+                    <form action="">
+                        <div class="col-12 mb-3">
+                            <label for="mail01" class="form-label">Email</label>
+                            <input type="email" id="mail01" class="form-control mail01" placeholder="請輸入Email" required>    
+                        </div>
+                        <div class="col-12 mb-4">
+                            <label for="pwd01" class="form-label">密碼</label>
+                            <input type="password" id="pwd01" class="form-control pwd01" placeholder="請輸入密碼" required>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-secondary h5" id="login01" style="width: 128px;">登入</button>
+                        </div>                    
+                        <div class="text-center"><a href="#" class="btn" id="register01">註冊帳號</a></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>    
+
+    <!--註冊頁面-->
+    <section class="register_page bg-primary d-none">
+        <div class="container p-5">
+            <h1 class="text-center text-md-start"><img src="./img/logo_lg.png" class="img-fluid" alt="logo"></h1>
+            <div class="row justify-content-center">
+                <div class="col-5 d-none d-md-block">
+                    <img src="./img/img2.png" class="img-fluid" alt="img">
+                </div>
+                <div class="col-12 col-md-5">
+                    <h3 class="text-secondary fw-bold mb-3 text-center text-md-start">註冊帳號</h2>
+                    <form action="">
+                        <div class="col-12 mb-3">
+                            <label for="mail02" class="form-label">Email</label>
+                            <input type="email" id="mail02" class="form-control mail02" placeholder="請輸入Email" required>
+                        </div>
+                        <div class="col-12 mb-3">
+                            <label for="nickname" class="form-label">您的暱稱</label>
+                            <input type="text" id="nickname" class="form-control nickname" placeholder="請輸入您的暱稱" required>
+                        </div>
+                        <div class="col-12 mb-3">
+                            <label for="pwd02" class="form-label">密碼</label>
+                            <input type="password" id="pwd02" class="form-control pwd02" placeholder="請輸入密碼" required>
+                        </div>
+                        <div class="col-12 mb-4">
+                            <label for="R-pwd" class="form-label">再次輸入密碼</label>
+                            <input type="password" id="R-pwd" class="form-control R-pwd" placeholder="請再次輸入密碼" required>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-secondary h5" style="width: 128px;" id="register02">註冊帳號</button>
+                        </div>                    
+                        <div class="text-center"><a href="#" class="btn" id="login02">登入</a></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <!--代辦頁面-->
+    <section class="todolist_page bg-primary p-3 d-none">
+        <div class="d-flex flex-row">
+            <img src="./img/logo.png" alt="logo" class="img-fluid">
+            <div class="ms-auto">
+                <span class="d-none d-md-inline">XXX的代辦</span>
+                <a href="#" class="btn ms-2" id="logout">登出</a>
+            </div>
+        </div>
+        <div class="container todolist">        
+            <div class="card input flex-row justify-content-between">
+                <input type="text" class="input_text" placeholder="新增待辦事項" />
+                <a href="#" class="btn_add">+</a>
+            </div>
+            <div class="card card_list">
+                <ul class="tab">
+                    <li class="active all">全部</li>
+                    <li class="unfinish">待完成</li>
+                    <li class="finish">已完成</li>
+                </ul>
+                <div class="cart_content">
+                    <ul class="list">
+                        
+                    </ul>
+                    <div class="list_footer">
+                        <p>0 個待完成項目</p>
+                        <a href="#">清除已完成項目</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>    
+
+    <!--引入JS-->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./JS/all.js"></script>
+</body>
+</html>
